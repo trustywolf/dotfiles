@@ -2,8 +2,6 @@
 	name = Xinyu Wei
 	email = trustywolf@sfc.wide.ad.jp
 	signingKey = CA0122C6BAD8B93FC55E8002D65EE7FA028AD59F
-[gpg]
-	program = /usr/local/bin/gpg
 [commit]
 	gpgSign = true
 [tag]

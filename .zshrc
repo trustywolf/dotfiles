@@ -53,7 +53,7 @@ case ${OSTYPE} in
 esac
 
 # prompt
-prompt grml-large
+#prompt grml-large
 
 # aliases
 alias t='tmux'
