@@ -1,5 +1,5 @@
 # trustywolf's .zshrc
-# Last update: 2022-04-26
+# Last update: 2022-10-27
 
 # Source global definitions
 if [ -f /etc/zshrc ]; then
@@ -48,6 +48,11 @@ case ${OSTYPE} in
 	if [ -f /usr/local/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]; then
       		source /usr/local/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 	fi
+        if type brew &>/dev/null; then
+          FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+          autoload -Uz compinit
+          compinit
+        fi
         #fast-theme -q free
         ;;
     linux*)
