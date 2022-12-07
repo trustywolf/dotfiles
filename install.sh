@@ -4,8 +4,8 @@ tmp_dir=/tmp/dotfiles
 echo "*** Installing dependencies ***"
 
 echo "*** Creating tmp_dir ***"
-git clone https://github.com/trustywolf/dotfiles.git ${pkgdir}
-cd ${pkgdir}
+git clone https://github.com/trustywolf/dotfiles.git ${tmp_dir}
+cd ${tmp_dir}
 
 echo "*** Install dotfiles ***"
 set -x # echo on
@@ -24,4 +24,4 @@ install -D -m 600 .gnupg/gpg.conf $HOME/.gnupg/gpg.conf
 set +x # echo off
 
 echo "*** Cleaning up ***"
-rm -r "${pkgdir}"
+rm -rf ${tmp_dir}
