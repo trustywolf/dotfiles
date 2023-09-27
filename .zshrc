@@ -21,9 +21,9 @@ case ${OSTYPE} in
 esac
 
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+if ! [[ "$PATH" =~ "$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
