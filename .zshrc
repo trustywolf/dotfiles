@@ -1,5 +1,5 @@
 # trustywolf's .zshrc
-# Last update: 2022-10-27
+# Last update: 2023-10-25
 
 # Source global definitions
 if [ -f /etc/zshrc ]; then
@@ -64,6 +64,13 @@ case ${OSTYPE} in
 	fi
         ;;
 esac
+
+# k8s completion
+[[ $commands[containerlab] ]] && source <(containerlab completion zsh)
+[[ $commands[helm] ]] && source <(helm completion zsh)
+[[ $commands[kind] ]] && source <(kind completion zsh)
+[[ $commands[kubeadm] ]] && source <(kubeadm completion zsh)
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # prompt
 #prompt grml-large
