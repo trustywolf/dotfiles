@@ -1,5 +1,5 @@
 # trustywolf's .zshrc
-# Last update: 2023-10-25
+# Last update: 2024-05-19
 
 # Source global definitions
 if [ -f /etc/zshrc ]; then
@@ -41,12 +41,11 @@ fi
 # plugins
 case ${OSTYPE} in
     darwin*)
-        export PATH="/usr/local/sbin:$PATH"
-	if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-		source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	if [ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+		source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 	fi
-	if [ -f /usr/local/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]; then
-      		source /usr/local/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+	if [ -f /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]; then
+      		source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 	fi
         if type brew &>/dev/null; then
           FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
