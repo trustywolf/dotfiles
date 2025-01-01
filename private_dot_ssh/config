@@ -1,0 +1,7 @@
+Host *
+    ForwardAgent yes
+    IPQoS none
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    KexAlgorithms +diffie-hellman-group14-sha1
+    HostKeyAlgorithms +ssh-rsa

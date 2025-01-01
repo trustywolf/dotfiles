@@ -1,0 +1,13 @@
+[user]
+	name = Xinyu Wei
+	email = trustywolf@sfc.wide.ad.jp
+	signingKey = CA0122C6BAD8B93FC55E8002D65EE7FA028AD59F
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+	forcesignannotated = true
+[push]
+	gpgSign = if-asked
+[init]
+	defaultBranch = main
