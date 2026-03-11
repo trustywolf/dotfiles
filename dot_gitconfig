@@ -1,0 +1,13 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Xinyu Wei
+	email = trustywolf@wolflab.net
+	signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true
+	forceSignAnnotated = true
