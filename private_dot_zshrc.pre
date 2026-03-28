@@ -16,5 +16,12 @@ if (( ${+commands[infocmp]} )) && ! (infocmp "$TERM" &>/dev/null); then
     export TERM=xterm-256color
 fi
 
+# PATH
+export GOPATH=$HOME/go
+path+=($GOPATH/bin $HOME/.cargo/bin /opt/radkit/bin)
+
+# GPG_TTY
+export GPG_TTY=$(tty)
+
 ## END OF FILE #################################################################
 # vim:filetype=zsh foldmethod=marker autoindent expandtab shiftwidth=4
