@@ -1,0 +1,20 @@
+# trustywolf's ~/.zshrc.pre
+# Last update: 2026-03-28
+
+# Source global definitions
+if [ -f /etc/zshrc ]; then
+        . /etc/zshrc
+fi
+
+# LANG
+export LANG=en_US.UTF-8
+
+# Fallback to xterm-256color if current TERM is not in terminfo database
+# This fixes display issues (e.g. character duplication) when SSH'ing from
+# terminals like Ghostty whose terminfo is not installed on the remote host.
+if (( ${+commands[infocmp]} )) && ! (infocmp "$TERM" &>/dev/null); then
+    export TERM=xterm-256color
+fi
+
+## END OF FILE #################################################################
+# vim:filetype=zsh foldmethod=marker autoindent expandtab shiftwidth=4
