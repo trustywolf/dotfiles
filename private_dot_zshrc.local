@@ -342,6 +342,7 @@ hex() {
 #vimhelp ()    { vim -c "help $1" -c on -c "au! VimEnter *" }
 
 # completions
+[[ $commands[chezmoi] ]] && source <(chezmoi completion zsh)
 [[ $commands[containerlab] ]] && source <(containerlab completion zsh)
 [[ $commands[helm] ]] && source <(helm completion zsh)
 [[ $commands[kind] ]] && source <(kind completion zsh)
